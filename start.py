@@ -1153,6 +1153,12 @@ def downloadsocks(choice):
         except:
             pass
         try:
+            r = requests.get("http://amp.tsddos.cc/proxy1.txt", timeout=5)
+            f.write(r.content)
+            f.close()
+        except:
+            pass
+        try:
             r = requests.get("https://www.proxyscan.io/download?type=socks5", timeout=5)
             f.write(r.content)
             f.close()
